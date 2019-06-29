@@ -197,6 +197,7 @@ function Plugin(
 
     if (!this.waiting || this.waiting.length === 0) {
       this.notifyKarmaAboutChanges();
+      return; // TODO: remove this once https://github.com/webpack-contrib/karma-webpack/issues/422 is fixed
     }
 
     if (this.waiting && !noAssets) {
